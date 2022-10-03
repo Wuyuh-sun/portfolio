@@ -1,0 +1,10 @@
+.wrap{
+  width: 100%;
+  /* height: 9000px; */
+  height: auto;
+  /* background-color: aliceblue; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
