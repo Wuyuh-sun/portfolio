@@ -4,7 +4,7 @@ import Myinfo from "./main/Myinfo";
 
 import About from "./main/About";
 import Skill from "./main/Skill";
-import PortFolios from "./main/portfolios";
+import PortFolios from "./main/Portfolios";
 import style from "../styles/mainPage.module.css";
 
 export default function MainPage() {
