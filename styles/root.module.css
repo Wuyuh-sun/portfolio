@@ -1,0 +1,25 @@
+.portfolio_input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio_input input, .portfolio_input textarea{
+  width: 300px;
+}
+.img_view{
+  width: 100%;
+  height: 500px;
+  background-color: cadetblue;
+  
+}
+.img_view div:nth-child(1){
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+}
+.img_view div:nth-child(2){
+  width: 100%;
+  height: 450px;
+}
