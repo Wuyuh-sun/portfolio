@@ -153,6 +153,7 @@
   transition: 0.3s;
   animation: downWheel 2s infinite ease-in-out;
   cursor: pointer;
+  z-index: 9999;
 }
 
 @keyframes downWheel {

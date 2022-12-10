@@ -14,7 +14,7 @@ export default function Skill() {
               wrap.current.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
             }}>
               <Image src={LinkImg} width={50} height={50} alt="LinkImg"/>
-              <h1>About Me</h1>
+              <h1>Skill</h1>
             </div>
           </div>
           <div className={style.content_wrap}></div>

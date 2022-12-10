@@ -1,3 +1,4 @@
+//this file name [...id].js
 
 export default function handler(req, res) {
   const id = req.query.id[0];
