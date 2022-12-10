@@ -50,7 +50,7 @@ export default function Jumbotron() {
         </div>
         <header className={style.Header}>
           <div className={style.Header_wrap}>
-            <h2 ref={h2Ref}>반갑습니다!</h2>
+            <h2 ref={h2Ref}>안녕하세요!</h2>
             <h1 ref={h1Ref}>웹 개발자 우윤하입니다 :)</h1>
             <h4 ref={h4Ref}>WEB FE/BE Developer</h4>
           </div>

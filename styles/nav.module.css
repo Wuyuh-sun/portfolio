@@ -26,10 +26,32 @@
   height: 70px;
   height: calc(100% - 30px);
   border-radius: 35px;
-  background-color: var(--blue7);
+  background-color: aliceblue;
   box-sizing: border-box;
   user-select: none;
   z-index: 9998;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.navBg_menuList{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 70px 0 0 0;
+  box-sizing: border-box;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+.navBg_menuList > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .wrap span img{
