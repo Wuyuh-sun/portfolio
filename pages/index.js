@@ -12,6 +12,12 @@ library.add(fas, far, faTwitter, faFontAwesome);
 export default function Home() {
   const [dataMethod, setDataMethod] = useState("post");
 
+  const [mount, setMount] = useState(false);
+
+  useEffect(()=>{
+    setMount(true);
+  },[])
+
   useEffect(() => {
     // axios({
     //   method: "get",
@@ -38,7 +44,7 @@ export default function Home() {
     //     console.dir(data);
     //   });
   }, []);
-  return (
+  return (mount &&
     <>
       <Splash />
       <MainPage />

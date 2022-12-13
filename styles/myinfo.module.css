@@ -1,34 +1,217 @@
-.wrap{
+.wrap {
   width: 1200px;
-  height: 500px;
-  /* background-color: antiquewhite; */
-  border: 1px solid black;
+  height: 2350px;
+  /* height: auto; */
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  /* border: 1px solid black; */
   box-sizing: border-box;
   padding: 50px 15px 50px 15px;
   position: relative;
   margin: 20px 0 20px 0;
+
 }
-.title_wrap{
+
+.title_wrap {
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
 }
-.title_wrapBox{
+
+.title_wrapBox {
   display: flex;
   cursor: pointer;
 }
-.title_wrapBox:hover, .title_wrapBox:hover h1{
+
+.title_wrapBox:hover,
+.title_wrapBox:hover h1 {
   filter: brightness(130%);
   color: rgb(50, 50, 50);
 }
-.title_wrapBox span img{
+
+.title_wrapBox span img {
   transition: 0.1s ease-in-out;
 }
-.title_wrapBox h1{
+
+.title_wrapBox h1 {
   font-family: Roboto-Bold;
   font-size: 2.5em;
   margin-left: 10px;
   line-height: 1.2em;
   color: var(--blue2);
+}
+
+.content_wrap_myinfo {
+  position: relative;
+  top: 50px;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.InfoItem_wrap {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 0 20px 0 20px;
+
+}
+
+.InfoItem_wrap_div div:nth-child(1) {
+  font-weight: bold;
+}
+
+.myUnivCareer {
+  position: relative;
+  top: 50px;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 350px;
+  overflow-x: scroll;
+}
+
+.myUnivCareer::-webkit-scrollbar {
+  height: 5px;
+}
+
+.timeline {
+  width: 2400px;
+  height: 3px;
+  background: linear-gradient(100deg,
+      rgb(150, 0, 0) 0%,
+      rgba(95, 155, 255, 1) 100%);
+  background-blend-mode: normal;
+  /* border: 2px solid black; */
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.year2021 {
+  color: gray;
+  position: absolute;
+  top:0;
+  left:0px;
+}
+
+.year2022 {
+  color: gray;
+  position: absolute;
+  top:0;
+  left: 500px;
+}
+
+.year2023 {
+  color: gray;
+  position: absolute;
+  top:0;
+  left: 2360px;
+}
+.timeline_wrap > div:nth-child(2):hover{
+  width: 30px !important; 
+  height: 30px !important;
+  transition: 0.3s ease-in-out;
+}
+.timeline_wrap > div:nth-child(1):hover ~ div:nth-child(2){
+  width: 30px !important; 
+  height: 30px !important;
+  transition: 0.3s ease-in-out;
+}
+
+.timeline_wrap:nth-child(odd)>div:nth-child(1) {
+  width: 180px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  text-align: center;
+  transform: translateX(-80px);
+  cursor: pointer;
+}
+
+.timeline_wrap:nth-child(even)>div:nth-child(1){
+  width: 180px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  text-align: center;
+  transform: translateX(-80px);
+  cursor: pointer;
+}
+.myCareerStateView{
+  width: 100%;
+  height: 600px;
+  /* border: 1px solid black; */
+  position: relative;
+  top: 70px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.myCareerStateView_header{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.title1{
+  color: gray;
+}
+.title2{
+  float: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 700px;
+}
+.expDate{
+  font-size: 2em;
+  font-weight: bold;
+  float: right;
+}
+.myCareerStateView_content{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.intro_swiperWrap{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  justify-content: space-between;
+}
+.intro_swiper1{
+  width: 800px;
+  height: 550px;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.intro_swiper2{
+  width: 300px;
+  height: 550px;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.contentText{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  /* overflow: scroll; */
 }

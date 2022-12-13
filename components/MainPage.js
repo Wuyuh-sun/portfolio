@@ -16,7 +16,7 @@ export default function MainPage() {
       <Nav />
       {/* main semantic */}
       <div className={style.wrap}>
-        <About />
+        {/* <About /> */}
         <Myinfo />
         <Skill/>
         <PortFolios/>

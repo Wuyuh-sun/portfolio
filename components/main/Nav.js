@@ -73,7 +73,7 @@ export default function Nav() {
         (navBg.current.childNodes[0].style.opacity = "1"));
   }, [navState, navController]);
 
-  return (
+  return ( iconArr &&
     <>
       <nav
         ref={img}

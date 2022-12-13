@@ -6,6 +6,7 @@ import BoatImg from "../../public/img/boat-unscreen.gif";
 import { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import style from "../../styles/jumbotron.module.css";
+import About from "./About";
 
 export default function Jumbotron() {
   const splashLoadingState = useSelector((state) => state.splash.value);
@@ -57,6 +58,8 @@ export default function Jumbotron() {
         </header>
         <div className={style.downWheel}  onClick={downWheelClick}/>
       </header>
+
+      <About />
       {/* 물결효과 */}
       <div className={style.custom_shape_divider_top_1664111356}>
         <svg
