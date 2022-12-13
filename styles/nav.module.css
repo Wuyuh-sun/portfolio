@@ -26,7 +26,7 @@
   height: 70px;
   height: calc(100% - 30px);
   border-radius: 35px;
-  background-color: aliceblue;
+  background-color: white;
   box-sizing: border-box;
   user-select: none;
   z-index: 9998;
