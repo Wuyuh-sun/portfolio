@@ -150,7 +150,7 @@ export default function Myinfo() {
               fontSize: "2em",
             }}
           >
-            저의 개발 경험을 보기 쉽게 그려 보았습니다!!
+            저의 성장 과정 입니다!!
           </div>
           <div className={style.myUnivCareer}>
             <div className={style.timeline}>
@@ -216,7 +216,7 @@ export default function Myinfo() {
                               }')`,
                               backgroundSize: "cover",
                               backgroundRepeat: "no-repeat",
-                          backgroundPosition: "50% 0",
+                              backgroundPosition: "50% 0",
                             }}
                           ></SwiperSlide>
                         );
@@ -270,7 +270,7 @@ export default function Myinfo() {
                               }')`,
                               backgroundSize: "cover",
                               backgroundRepeat: "no-repeat",
-                          backgroundPosition: "50% 0",
+                              backgroundPosition: "50% 0",
                             }}
                           ></SwiperSlide>
                         );

@@ -1,7 +1,7 @@
 .wrap {
   width: 1200px;
   height: 2350px;
-  /* height: auto; */
+  height: auto;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
@@ -10,7 +10,9 @@
   padding: 50px 15px 50px 15px;
   position: relative;
   margin: 20px 0 20px 0;
-
+}
+.wrap section{
+  height: auto;
 }
 
 .title_wrap {
@@ -148,11 +150,11 @@
 }
 .myCareerStateView{
   width: 100%;
-  height: 600px;
+  height: auto;
   /* border: 1px solid black; */
   position: relative;
   top: 70px;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   box-sizing: border-box;
 }
 .myCareerStateView_header{
@@ -210,7 +212,7 @@
 .contentText{
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 80px 20px 20px 20px;
   box-sizing: border-box;
   font-size: 1.5em;
   /* overflow: scroll; */
