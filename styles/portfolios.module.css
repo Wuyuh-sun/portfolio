@@ -1,20 +1,22 @@
-.bg{
+.bg {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
-  margin: 100px 0 100px 0;
+  margin: 100px 0 200px 0;
 }
-.bg_opacity{
+
+.bg_opacity {
   width: 100%;
   height: 900px;
   position: absolute;
   background-color: rgba(40, 40, 80, 0.7);
   z-index: 998;
   backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
 }
 
-.wrap{
+.wrap {
   width: 1200px;
   height: 900px;
   /* background-color: white; */
@@ -26,33 +28,188 @@
   position: relative;
   /* margin: 20px 0 20px 0; */
   z-index: 999;
+  transition: 0.5s ease-in-out;
 }
-.title_wrap{
+
+.title_wrap {
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
 }
-.title_wrapBox{
+
+.title_wrapBox {
   display: flex;
   cursor: pointer;
 
 }
-.title_wrapBox:hover, .title_wrapBox:hover h1{
+
+.title_wrapBox:hover,
+.title_wrapBox:hover h1 {
   filter: brightness(90%);
 
 }
-.title_wrapBox span img{
+
+.title_wrapBox span img {
   transition: 0.1s ease-in-out;
 }
-.title_wrapBox h1{
+
+.title_wrapBox h1 {
   font-family: Roboto-Bold;
   font-size: 2.5em;
   margin-left: 10px;
   line-height: 1.2em;
   color: white;
 }
-.content_wrap{
+
+.content_wrap {
+  width: 100%;
+  height: 700px;
+  margin: 50px 0 0 0;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* display: flex; */
+  transition: 0.5s ease-in-out;
+}
+.projectList{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+.projectReadMe{
+  width: 1170px;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  position: relative;
+  top: -500px;
+  left: 110%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.MYPAD,
+.SA,
+.ROOMBOOK,
+.LAMAH {
+  width: 550px;
+  height: 250px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  background-color: rgba(130, 130, 150, 0.9);
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  /* transform: translate(-50%,-50%); */
+}
+.LAMAH{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F8F8;
+}
+.MYPAD:hover,
+.SA:hover,
+.ROOMBOOK:hover,
+.LAMAH:hover {
+  transform: scale(1.05);
+  /* transform: translate(-50%,-50%); */
+}
+
+.swiperWrap{
+  width: calc(100% - 50px);
+  height: 700px;
+  background-color: rgba(130, 130, 150, 0.9);
+  border-radius: 30px;
+  margin: 0 0 100px 0;
+}
+
+.ReadMe_contentWrap{
+  width: 1080px;
+  height: auto;
+  background-color: white;
+  border-radius: 30px;
+  /* margin: 100px 0 0 0; */
+  padding: 40px;
+  box-sizing: border-box;
+}
+.ReadMe_contentWrap hr{
+  margin: 30px 0 30px 0;
+}
+.ReadMe_title{
+  font-size: 2em;
+  font-weight: 900;
+}
+.ReadMe_title small{
+  font-weight: 100;
+  color: gray;
+}
+.ReadMe_Summary_title{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.ReadMe_function{
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.ReadMe_function ul{
+  font-weight: 400;
+  list-style: none;
+}
+.ReadMe_function ul li{
+  font-size: 0.8em;
+}
+.ReadMe_devBg h2{
+  font-size: 2em;
+  font-weight: 900;
+}
+.ReadMe_devBg div{
+  font-size: 1em;
+  font-weight: 400;
+}
+.ReadMe_feeling h2{
+  font-size: 2em;
+  font-weight: 900;
+}
+.ReadMe_stack h2{
+  font-size: 2em;
+  font-weight: 900;
+}
+.ReadMe_stack ul{
+  list-style: none;
+}
+.ReadMe_repository h2{
+  font-size: 2em;
+  font-weight: 900;
+}
+.ReadMe_repository ul{
+  list-style: none;
+}
+
+
+.backBtn{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

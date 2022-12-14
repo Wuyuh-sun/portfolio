@@ -57,13 +57,13 @@ body {
 
 body {
   overflow-y: scroll;
-  background: aliceblue;
-  /* background: linear-gradient(
+  /* background: aliceblue; */
+  background: linear-gradient(
     172deg,
-    rgba(64, 33, 20, 1) 0%,
-    rgb(189, 163, 134) 100%
+    rgb(153, 91, 65) 0%,
+    rgb(255, 248, 190) 100%
   );
-  background-blend-mode: normal; */
+  background-blend-mode: normal;
 }
 
 ::-webkit-scrollbar {

@@ -186,7 +186,7 @@ export default function Myinfo() {
                     className="mySwiper"
                     style={{
                       height: "100%",
-                      borderRadius: "30px",
+                      borderRadius: "20px",
                       boxShadow: "0 3px 6px rgba(0,0,0,0.5)",
                     }}
                   >
@@ -240,7 +240,7 @@ export default function Myinfo() {
                     className="mySwiper"
                     style={{
                       height: "100%",
-                      borderRadius: "30px",
+                      borderRadius: "20px",
                       boxShadow: "0 3px 6px rgba(0,0,0,0.5)",
                     }}
                   >
