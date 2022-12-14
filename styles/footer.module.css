@@ -1,5 +1,60 @@
 .wrap{
   width: 100%;
-  height: 400px;
-  background-color: var(--white);
+  height: 500px;
+  background-color: #0099ff;
+  position: relative;
+  top: -10px;
+  box-sizing: border-box;
+  padding: 50px;
+}
+.brands{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  position: absolute;
+  cursor: pointer;
+}
+.brands svg{
+  position: relative;
+  top: 8px;
+  left: 10px;
+  cursor: pointer;
+}
+.brands svg path{
+  fill: black;
+}
+.brands:nth-child(1){
+  top: 80%;
+  left: 50px;
+
+}
+.brands:nth-child(2){
+  top: 80%;
+  left: 150px;
+
+}
+.brands:nth-child(3){
+  top: 80%;
+  left: 250px;
+
+}
+.Contacth1{
+  font-size: 5em;
+  position: relative;
+  top: -200px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.ContactMail{
+  color: aliceblue;
+  font-size: 7em;
+  font-weight: 900;
+  text-decoration: none;
+  position: relative;
+  top: -100px;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.ContactMail:hover{
+  filter: brightness(80%);
 }
