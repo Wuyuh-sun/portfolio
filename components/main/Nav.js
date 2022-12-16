@@ -149,6 +149,8 @@ export default function Nav() {
           <div
             onClick={() => {
               // navController.more();
+              navController.more();
+              dispatch(nowLocate("more"));
             }}
           >
             {iconArr[4]}

@@ -6,8 +6,13 @@ import About from "./main/About";
 import Skill from "./main/Skill";
 import PortFolios from "./main/Portfolios";
 import style from "../styles/mainPage.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 export default function MainPage() {
+  const upMoveBtn = useRef();
+
   return (
     <>
       {/* header semantic */}
@@ -18,10 +23,9 @@ export default function MainPage() {
       <div className={style.wrap}>
         {/* <About /> */}
         <Myinfo />
-        <Skill/>
-        <PortFolios/>
+        <Skill />
+        <PortFolios />
       </div>
-      
     </>
   );
 }

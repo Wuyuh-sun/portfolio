@@ -55,6 +55,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  transform: scale(0.8);
 }
 .content_wrap h2{
   text-align: start;

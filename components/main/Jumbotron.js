@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import style from "../../styles/jumbotron.module.css";
 import About from "./About";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Jumbotron() {
   const splashLoadingState = useSelector((state) => state.splash.value);
@@ -17,6 +18,7 @@ export default function Jumbotron() {
   const h2Ref = useRef();
   const h1Ref = useRef();
   const h4Ref = useRef();
+  const upMoveBtn = useRef();
 
   useEffect(() => {
     if (splashLoadingState === 0) {
@@ -39,6 +41,22 @@ export default function Jumbotron() {
     aboutWrapState.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
+  function scrollTop(){
+    wrapRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+    // console.log("up!")
+  }
+
+  useEffect(() => {
+    document.body.addEventListener("scroll", () => {
+      document.body.scrollTop > 800
+        ? (upMoveBtn.current.style.display = "flex")
+        : (upMoveBtn.current.style.display = "none");
+    });
+  }, []);
   return (
     <>
       <header ref={wrapRef} className={style.wrap}>
@@ -83,6 +101,16 @@ export default function Jumbotron() {
             className={style.shape_fill}
           ></path>
         </svg>
+      </div>
+      <div
+        ref={upMoveBtn}
+        className={style.upMoveBtn}
+        style={{
+          display: "none",
+        }}
+        onClick={scrollTop}
+      >
+        <FontAwesomeIcon icon="fa-solid fa-arrow-up" size="1x" />
       </div>
     </>
   );

@@ -9,12 +9,10 @@
   --white: #e3ebd3;
   --gray: #7f817f;
 }
-
 * {
   padding: 0;
   margin: 0;
 }
-
 @font-face {
   font-family: Roboto-Light;
   src: url(../public/fonts/Roboto/Roboto-Light.ttf);
@@ -52,8 +50,13 @@ body {
   overflow: hidden;
   max-width: 100%;
   max-height: 100%;
+  
   /* background: var(--blue7); */
 }
+/* html{
+  transform: scale(0.8);
+  background-repeat: no-repeat;
+} */
 
 body {
   overflow-y: scroll;
@@ -64,6 +67,7 @@ body {
     rgb(255, 248, 190) 100%
   );
   background-blend-mode: normal;
+  
 }
 
 ::-webkit-scrollbar {
