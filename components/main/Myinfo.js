@@ -52,7 +52,7 @@ export default function Myinfo() {
         <section>
           <div className={style.title_wrap}>
             <div className={style.title_wrapBox} onClick={locationMyInfo}>
-              <Image src={LinkImg} width={50} height={50} alt="LinkImg" />
+              <Image src={LinkImg} width={50} height={50} alt="LinkImg" loading="lazy"/>
               <h1>My Info</h1>
             </div>
           </div>

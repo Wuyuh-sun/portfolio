@@ -82,7 +82,7 @@ export default function Nav() {
           !navState ? setNavState(true) : setNavState(false);
         }}
       >
-        <Image src={logoImg} width={50} height={50} alt="logoImg" />
+        <Image src={logoImg} width={50} height={50} alt="logoImg" loading="lazy"/>
       </nav>
       <div ref={navBg} className={style.navBg}>
         <div className={style.navBg_menuList}>

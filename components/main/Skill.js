@@ -54,24 +54,24 @@ export default function Skill() {
               <div className={style.frontWrap}>
                 <h2>Frontend</h2>
                 <hr />
-                <Image src={front} />
+                <Image src={front} loading="lazy" alt="skill-img"/>
               </div>
               <div className={style.backWrap}>
                 <h2>Backend</h2>
                 <hr />
-                <Image src={back} />
+                <Image src={back} loading="lazy" alt="skill-img"/>
               </div>
               <div className={style.versionWrap}>
                 <h2>Tools</h2>
                 <hr />
-                <Image src={tool} />
+                <Image src={tool} loading="lazy" alt="skill-img"/>
               </div>
               <div className={style.toolWrap}>
                 <h3>
                   Version Control &<br /> DevOps
                 </h3>
                 <hr />
-                <Image src={version} />
+                <Image src={version} loading="lazy" alt="skill-img"/>
               </div>
             </div>
           </section>

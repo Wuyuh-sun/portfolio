@@ -147,6 +147,8 @@ export default function Portfolios() {
                   src={require("../../public/img/pf/team1.png")}
                   width={150}
                   height={300}
+                  loading="lazy"
+                  alt="portfolioImg"
                 />
               </div>
               <div
@@ -161,6 +163,8 @@ export default function Portfolios() {
                 <Image
                   src={require("../../public/img/pf/rb.png")}
                   layout="fill"
+                  loading="lazy"
+                  alt="portfolioImg"
                 />
               </div>
               <div
@@ -175,6 +179,8 @@ export default function Portfolios() {
                 <Image
                   src={require("../../public/img/pf/sa.png")}
                   layout="fill"
+                  loading="lazy"
+                  alt="portfolioImg"
                 />
               </div>
               <div
@@ -189,6 +195,8 @@ export default function Portfolios() {
                 <Image
                   src={require("../../public/img/pf/mypad.png")}
                   layout="fill"
+                  loading="lazy"
+                  alt="portfolioImg"
                 />
               </div>
             </div>

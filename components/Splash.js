@@ -29,7 +29,7 @@ export default function Splash() {
   return (
     <>
       <div ref={wrapRef} className={style.wrap}>
-        <Image src={loadingOrca} width={400} height={300} alt="loadingOrca"/>
+        <Image src={loadingOrca} width={400} height={300} alt="loadingOrca" />
         <div className={style.loadingText}>
           <h1>WUYUH&#39;s WEB PORTFOLIO</h1>
           <h4>WEB FullStack Developer</h4>

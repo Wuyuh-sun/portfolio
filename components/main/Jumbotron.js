@@ -60,12 +60,12 @@ export default function Jumbotron() {
   return (
     <>
       <header ref={wrapRef} className={style.wrap}>
-        <Image src={DecoImg} width={500} height={500} alt="DecoImg"/>
+        <Image src={DecoImg} width={500} height={500} alt="DecoImg" loading="lazy"/>
         <div ref={ImgRef} className={style.boatWrap}>
           {/* 배1 */}
-          <Image src={BoatImg} width={500} height={500} alt="BoatImg"/>
+          <Image src={BoatImg} width={500} height={500} alt="BoatImg" loading="lazy"/>
           {/* 배2 */}
-          <Image src={BoatImg} width={500} height={500} alt="BoatImg"/>
+          <Image src={BoatImg} width={500} height={500} alt="BoatImg" loading="lazy"/>
         </div>
         <header className={style.Header}>
           <div className={style.Header_wrap}>
