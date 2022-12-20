@@ -34,7 +34,7 @@ export default function Portfolios() {
   const myPadUrl = "/mypad.png";
   const saUrl = "/sa.png";
   const rbUrl = "/rb_1.jpg";
-  const lamahUrl = "/lamah.gif";
+  const lamahUrl = "/lamah.webp";
 
   const [bgState, setBgState] = useState(lamahUrl);
 
@@ -98,8 +98,8 @@ export default function Portfolios() {
           }, 300))
         : ((projectListRef.current.style.left = "-110%"),
           (projectReadMe.current.style.left = "0%"),
-          (wrap.current.style.height = "2800px"),
-          (bg_opacity.current.style.height = "2800px"),
+          (wrap.current.style.height = "2850px"),
+          (bg_opacity.current.style.height = "2850px"),
           (content_wrap.current.style.height = "auto"),
           setTimeout(() => {
             title.current.innerText = `${projectStateString}`;
@@ -112,7 +112,9 @@ export default function Portfolios() {
   }, [projectList, projectStateString, wrapOffsetHeight]);
 
   return (
-    <>
+    <section style={{
+      width:"100%"
+    }}>
       <div
         className={style.bg}
         style={{
@@ -200,7 +202,7 @@ export default function Portfolios() {
                 />
               </div>
             </div>
-            <div ref={projectReadMe} className={style.projectReadMe}>
+            <article ref={projectReadMe} className={style.projectReadMe}>
               <div className={style.swiperWrap}>
                 <Swiper
                   pagination={true}
@@ -351,7 +353,7 @@ export default function Portfolios() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
 
           <div
@@ -379,6 +381,6 @@ export default function Portfolios() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }

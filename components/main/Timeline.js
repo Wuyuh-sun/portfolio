@@ -13,8 +13,12 @@ export default function Timeline(props) {
           position: "absolute",
           left: `calc(${props.data.left} - 10px)`,
         }}
-        onClick={() => {
+        onClick={(e) => {
           dispatch(expSelectFunc(props.data));
+          e.currentTarget.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }}
       >
         {props.data.title}
@@ -34,8 +38,12 @@ export default function Timeline(props) {
           left: `${props.data.left}`,
           cursor: "pointer",
         }}
-        onClick={() => {
+        onClick={(e) => {
           dispatch(expSelectFunc(props.data));
+          e.currentTarget.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }}
       ></div>
     </>

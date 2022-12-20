@@ -74,8 +74,8 @@ export default function Nav() {
   }, [navState, navController]);
 
   return ( iconArr &&
-    <>
-      <nav
+    <nav>
+      <div
         ref={img}
         className={style.wrap}
         onClick={() => {
@@ -83,7 +83,7 @@ export default function Nav() {
         }}
       >
         <Image src={logoImg} width={50} height={50} alt="logoImg" loading="lazy"/>
-      </nav>
+      </div>
       <div ref={navBg} className={style.navBg}>
         <div className={style.navBg_menuList}>
           <div
@@ -164,6 +164,6 @@ export default function Nav() {
           </div>
         </div>
       </div>
-    </>
+    </nav>
   );
 }

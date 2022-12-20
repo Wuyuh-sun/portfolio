@@ -48,8 +48,8 @@ export default function Myinfo() {
 
   return (
     <>
-      <div className={style.wrap} ref={wrap}>
-        <section>
+      <section className={style.wrap} ref={wrap}>
+        <div>
           <div className={style.title_wrap}>
             <div className={style.title_wrapBox} onClick={locationMyInfo}>
               <Image src={LinkImg} width={50} height={50} alt="LinkImg" loading="lazy"/>
@@ -283,8 +283,8 @@ export default function Myinfo() {
               <div className={style.contentText}>{expSelectState.content}</div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef } from "react";
 import { useEffect } from "react";
 
+
 export default function MainPage() {
   const upMoveBtn = useRef();
 
@@ -20,12 +21,12 @@ export default function MainPage() {
       {/* nav semantic */}
       <Nav />
       {/* main semantic */}
-      <div className={style.wrap}>
+      <main className={style.wrap}>
         {/* <About /> */}
         <Myinfo />
         <Skill />
         <PortFolios />
-      </div>
+      </main>
     </>
   );
 }
