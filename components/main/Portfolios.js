@@ -228,7 +228,7 @@ export default function Portfolios() {
                                 .default.src
                             }')`,
                             backgroundSize:
-                              projectState === lamah ? "350px 700px" : "cover",
+                              projectState === lamah ? "250px 500px" : "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "50% 0",
                           }}

@@ -131,7 +131,7 @@
 
 .swiperWrap{
   width: calc(100% - 50px);
-  height: 700px;
+  height: 500px;
   background-color: rgba(130, 130, 150, 0.9);
   border-radius: 30px;
   margin: 0 0 100px 0;

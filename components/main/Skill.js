@@ -43,7 +43,9 @@ export default function Skill() {
       </svg>
       <div className={style.bg}>
         <div className={style.wrap} ref={wrap}>
-          <section>
+          <section style={{
+            width:"100%"
+          }}>
             <div className={style.title_wrap}>
               <div className={style.title_wrapBox} onClick={locationSkill}>
                 <Image src={LinkImg} width={50} height={50} alt="LinkImg" />
