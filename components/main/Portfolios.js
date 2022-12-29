@@ -57,6 +57,7 @@ export default function Portfolios() {
   const projectListRef = useRef();
   const backBtn = useRef();
   const projectReadMe = useRef();
+  const bgRef = useRef();
   const bg_opacity = useRef();
   const content_wrap = useRef();
 
@@ -84,13 +85,13 @@ export default function Portfolios() {
     // console.dir(readMe);
   }, [projectState, readMe]);
 
-  const [innerWidth, setInnerWidth] = useState();
-  const [innerHeight, setInnerHeight] = useState();
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+  const [innerHeight, setInnerHeight] = useState(window.innerHeight);
 
-  window.addEventListener("resize", (e)=>{
+  window.addEventListener("resize", (e) => {
     setInnerWidth(e.currentTarget.innerWidth);
-    setInnerHeight(e.currentTarget.innerHeight)
-  })
+    setInnerHeight(e.currentTarget.innerHeight);
+  });
 
   useEffect(() => {
     async function projectListFunc() {
@@ -99,16 +100,27 @@ export default function Portfolios() {
           (projectListRef.current.style.left = "0%"),
           (projectReadMe.current.style.left = "110%"),
           (wrap.current.style.height = "100%"),
-          (innerWidth > 599 ? bg_opacity.current.style.height = "900px" : bg_opacity.current.style.height = "1200px"),
-          (innerWidth > 599 ? content_wrap.current.style.height = "700px" : content_wrap.current.style.height = "900px"),
+          (innerWidth > 599 ? bgRef.current.style.height = "900px" : bgRef.current.style.height = "1200px"),
+          innerWidth > 599
+            ? (bg_opacity.current.style.height = "900px")
+            : (bg_opacity.current.style.height = "1200px"),
+          innerWidth > 599
+            ? (content_wrap.current.style.height = "700px")
+            : (content_wrap.current.style.height = "1000px"),
           setTimeout(() => {
             title.current.innerText = "Projects";
           }, 300))
         : ((projectListRef.current.style.left = "-110%"),
+          
           (projectReadMe.current.style.left = "0%"),
-          (wrap.current.style.height = "2850px"),
-          (bg_opacity.current.style.height = "2850px"),
-          (content_wrap.current.style.height = "auto"),
+          ( innerWidth > 599 ? wrap.current.style.height = "2850px" : wrap.current.style.height = "3000px"),
+          (innerWidth > 599 ? bgRef.current.style.height = "" : bgRef.current.style.height = "3000px"),
+          innerWidth > 599
+            ? (bg_opacity.current.style.height = "2850px")
+            : (bg_opacity.current.style.height = "3000px"),
+          innerWidth > 599
+            ? (content_wrap.current.style.height = "auto")
+            : (content_wrap.current.style.height = "auto"),
           setTimeout(() => {
             title.current.innerText = `${projectStateString}`;
           }, 300),
@@ -117,13 +129,25 @@ export default function Portfolios() {
           }, 500));
     }
     projectListFunc();
-  }, [projectList, projectStateString, wrapOffsetHeight,innerWidth,innerHeight]);
+  }, [
+    projectList,
+    projectStateString,
+    wrapOffsetHeight,
+    innerWidth,
+    innerHeight,
+  ]);
 
+  useEffect(()=>{
+    console.log(innerWidth)
+  },[innerWidth])
   return (
-    <section style={{
-      width:"100%",
-    }}>
+    <section
+      style={{
+        width: "100%",
+      }}
+    >
       <div
+        ref={bgRef}
         className={style.bg}
         style={{
           backgroundImage:
@@ -151,6 +175,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(lamah);
                   setProjectStateString("Lamah");
+                  locationPortfolio();
                 }}
               >
                 <Image
@@ -168,6 +193,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(rb);
                   setProjectStateString("ROMBOOK");
+                  locationPortfolio();
                 }}
               >
                 <Image
@@ -184,6 +210,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(sa);
                   setProjectStateString("Smokre Area");
+                  locationPortfolio();
                 }}
               >
                 <Image
@@ -200,6 +227,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(mypad);
                   setProjectStateString("My Pad");
+                  locationPortfolio();
                 }}
               >
                 <Image
@@ -236,7 +264,16 @@ export default function Portfolios() {
                                 .default.src
                             }')`,
                             backgroundSize:
-                              projectState === lamah ? "250px 500px" : "cover",
+                              // projectState === lamah && innerWidth > 599
+                              //   ? "250px 540px"
+                              //   : innerWidth < 599
+                              //   ? "100px 200px"
+                              //   : "cover",
+                              
+                              projectState === lamah && innerWidth > 599
+                              ? "250px 540px" 
+                              : projectState === lamah && innerWidth <= 599 ? "100px 200px"
+                              : "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "50% 0",
                           }}
@@ -346,11 +383,7 @@ export default function Portfolios() {
                       <>
                         <li>
                           Deploy URL :{" "}
-                          <a
-                            href={readMe.url}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
+                          <a href={readMe.url} target="_blank" rel="noreferrer">
                             {readMe.url}
                           </a>
                         </li>

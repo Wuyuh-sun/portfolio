@@ -134,7 +134,7 @@
 
 .swiperWrap{
   width: calc(100% - 50px);
-  height: 500px;
+  aspect-ratio: 18/9;
   background-color: rgba(130, 130, 150, 0.9);
   border-radius: 30px;
   margin: 0 0 100px 0;
@@ -288,7 +288,6 @@
     margin: 50px 0 0 0;
     padding: 20px;
     box-sizing: border-box;
-    overflow: hidden;
     /* display: flex; */
     transition: 0.5s ease-in-out;
   }
@@ -305,15 +304,15 @@
     transition: 0.5s ease-in-out;
   }
   .projectReadMe{
-    width: 1170px;
+    width: 100%;
     height: 100%;
     transition: 0.5s ease-in-out;
     position: relative;
-    top: -500px;
+    top: -900px;
     left: 110%;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -352,27 +351,27 @@
   }
   
   .swiperWrap{
-    width: calc(100% - 50px);
-    height: 500px;
+    width: 100%;
+    aspect-ratio: 16/9;
     background-color: rgba(130, 130, 150, 0.9);
     border-radius: 30px;
     margin: 0 0 100px 0;
   }
   
   .ReadMe_contentWrap{
-    width: 1080px;
+    width: 100%;
     height: auto;
     background-color: white;
     border-radius: 30px;
     /* margin: 100px 0 0 0; */
-    padding: 40px;
+    padding: 20px;
     box-sizing: border-box;
   }
   .ReadMe_contentWrap hr{
     margin: 30px 0 30px 0;
   }
   .ReadMe_title{
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 900;
   }
   .ReadMe_title small{
@@ -380,11 +379,14 @@
     color: gray;
   }
   .ReadMe_Summary_title{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 900;
   }
+  .ReadMe_Summary_content{
+    font-size: 0.9em;
+  }
   .ReadMe_function{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 900;
   }
   .ReadMe_function ul{
@@ -395,29 +397,34 @@
     font-size: 0.8em;
   }
   .ReadMe_devBg h2{
-    font-size: 2em;
+    font-size: 1.2em;
     font-weight: 900;
   }
   .ReadMe_devBg div{
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 400;
   }
   .ReadMe_feeling h2{
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 900;
   }
+  .ReadMe_feeling div{
+    font-size: 0.9em;
+  }
   .ReadMe_stack h2{
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 900;
   }
   .ReadMe_stack ul{
+    font-size: 0.9em;
     list-style: none;
   }
   .ReadMe_repository h2{
-    font-size: 2em;
+    font-size: 1em;
     font-weight: 900;
   }
   .ReadMe_repository ul{
+    font-size: 0.9em;
     list-style: none;
   }
   
@@ -428,9 +435,10 @@
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
+    top: 470px;
+    left: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
