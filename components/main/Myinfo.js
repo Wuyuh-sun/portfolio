@@ -144,11 +144,7 @@ export default function Myinfo() {
           </div>
           <hr />
           <div
-            style={{
-              textAlign: "center",
-              margin: "50px 0 0 50px",
-              fontSize: "2em",
-            }}
+            className={style.myUnivCareer_title}
           >
             저의 성장 과정 입니다!!
           </div>
@@ -168,7 +164,7 @@ export default function Myinfo() {
           </div>
           <div className={style.myCareerStateView}>
             <div className={style.myCareerStateView_header}>
-              <div>
+              <div className={style.exptitle_wrap}>
                 <span className={style.title2}>{expSelectState.title2}</span>
                 <br />
                 <small className={style.title1}>{expSelectState.title}</small>

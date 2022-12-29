@@ -84,15 +84,23 @@ export default function Portfolios() {
     // console.dir(readMe);
   }, [projectState, readMe]);
 
+  const [innerWidth, setInnerWidth] = useState();
+  const [innerHeight, setInnerHeight] = useState();
+
+  window.addEventListener("resize", (e)=>{
+    setInnerWidth(e.currentTarget.innerWidth);
+    setInnerHeight(e.currentTarget.innerHeight)
+  })
+
   useEffect(() => {
     async function projectListFunc() {
       projectList
         ? ((backBtn.current.style.display = "none"),
           (projectListRef.current.style.left = "0%"),
           (projectReadMe.current.style.left = "110%"),
-          (wrap.current.style.height = "900px"),
-          (bg_opacity.current.style.height = "900px"),
-          (content_wrap.current.style.height = "700px"),
+          (wrap.current.style.height = "100%"),
+          (innerWidth > 599 ? bg_opacity.current.style.height = "900px" : bg_opacity.current.style.height = "1200px"),
+          (innerWidth > 599 ? content_wrap.current.style.height = "700px" : content_wrap.current.style.height = "900px"),
           setTimeout(() => {
             title.current.innerText = "Projects";
           }, 300))
@@ -109,11 +117,11 @@ export default function Portfolios() {
           }, 500));
     }
     projectListFunc();
-  }, [projectList, projectStateString, wrapOffsetHeight]);
+  }, [projectList, projectStateString, wrapOffsetHeight,innerWidth,innerHeight]);
 
   return (
     <section style={{
-      width:"100%"
+      width:"100%",
     }}>
       <div
         className={style.bg}
