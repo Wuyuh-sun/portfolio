@@ -15,7 +15,7 @@
   background-color: rgba(40, 40, 80, 0.7);
   z-index: 998;
   backdrop-filter: blur(10px);
-  transition: 0.5s ease-in-out;
+  /* transition: 0.5s ease-in-out; */
 }
 
 .wrap {
@@ -235,7 +235,7 @@
     background-color: rgba(40, 40, 80, 0.7);
     z-index: 998;
     backdrop-filter: blur(10px);
-    transition: 0.5s ease-in-out;
+    /* transition: 0.5s ease-in-out; */
   }
   
   .wrap {
@@ -436,9 +436,9 @@
     height: 50px;
     border-radius: 50%;
     background-color: white;
-    position: absolute;
-    top: 470px;
-    left: 50%;
+    position: relative;
+    top: -50%;
+    left: 5%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
     transform: translate(-50%, -50%);
     display: flex;

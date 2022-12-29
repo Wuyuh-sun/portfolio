@@ -97,8 +97,17 @@ export default function Portfolios() {
     async function projectListFunc() {
       projectList
         ? ((backBtn.current.style.display = "none"),
+          (projectListRef.current.style.height = "100%"),
+          (projectListRef.current.childNodes[0].style.height = ""),
+          (projectListRef.current.childNodes[1].style.height = ""),
+          (projectListRef.current.childNodes[2].style.height = ""),
+          (projectListRef.current.childNodes[3].style.height = ""),
           (projectListRef.current.style.left = "0%"),
           (projectReadMe.current.style.left = "110%"),
+          (projectReadMe.current.style.transition = "0.5s ease-in-out"),
+          innerWidth > 599
+            ? (projectReadMe.current.style.top = "-500px")
+            : (projectReadMe.current.style.top = "-900px"),
           (wrap.current.style.height = "100%"),
           innerWidth > 599
             ? (bgRef.current.style.height = "900px")
@@ -113,6 +122,16 @@ export default function Portfolios() {
             title.current.innerText = "Projects";
           }, 300))
         : ((projectListRef.current.style.left = "-110%"),
+          (projectListRef.current.style.height = "0%"),
+          (projectListRef.current.childNodes[0].style.height = "0px"),
+          (projectListRef.current.childNodes[1].style.height = "0px"),
+          (projectListRef.current.childNodes[2].style.height = "0px"),
+          (projectListRef.current.childNodes[3].style.height = "0px"),
+          (projectListRef.current.childNodes[0].style.marginBottom = "0px"),
+          (projectListRef.current.childNodes[1].style.marginBottom = "0px"),
+          (projectListRef.current.childNodes[2].style.marginBottom = "0px"),
+          (projectListRef.current.childNodes[3].style.marginBottom = "0px"),
+          (projectReadMe.current.style.top = "0px"),
           (projectReadMe.current.style.left = "0%"),
           innerWidth > 599
             ? (wrap.current.style.height = "100%")
@@ -131,6 +150,8 @@ export default function Portfolios() {
           }, 300),
           setTimeout(() => {
             backBtn.current.style.display = "block";
+            // projectReadMe.current.style.transition = "none";
+            
           }, 500));
     }
     projectListFunc();
