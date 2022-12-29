@@ -115,7 +115,7 @@
       "date":"after...",
       "title":"추후 일정",
       "title2":"추후 일정",
-      "content": "부족함을 많이 느끼고 앞으로도 구직 활동과는 관계 없이 계속 공부를 할 예정입니다. 이후 학습의 일정으로는 'Dart','Flutter','React Native','NestJS','NextJS','Java','Python','Spring boot' 등 이 있습니다.",
+      "content": "부족함을 많이 느끼고 앞으로도 계속 공부를 할 예정입니다.\n이후 익히고 싶은 기술은 'Dart', 'Flutter', 'ReactNative',\n'NestJS', 'NextJS', 'Java', 'Python',\n 'Spring boot' 등 이 있습니다.",
       "gift": "미래 계획",
       "left": "2300px",
       "web":["/reactnative.png", "/nextjs.png","/nestjs.png","/Java.jpg","/python.png","/springboot.png"],

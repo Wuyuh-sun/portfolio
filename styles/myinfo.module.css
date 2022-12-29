@@ -231,6 +231,7 @@
   box-sizing: border-box;
   font-size: 1.5em;
   /* overflow: scroll; */
+  white-space: normal;
 }
 
 .myUnivCareer_title {
@@ -491,6 +492,7 @@
     padding: 50px 10px 20px 10px;
     box-sizing: border-box;
     font-size: 1em;
+    white-space: normal;
     /* overflow: scroll; */
   }
 }

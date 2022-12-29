@@ -100,7 +100,9 @@ export default function Portfolios() {
           (projectListRef.current.style.left = "0%"),
           (projectReadMe.current.style.left = "110%"),
           (wrap.current.style.height = "100%"),
-          (innerWidth > 599 ? bgRef.current.style.height = "900px" : bgRef.current.style.height = "1200px"),
+          innerWidth > 599
+            ? (bgRef.current.style.height = "900px")
+            : (bgRef.current.style.height = "1200px"),
           innerWidth > 599
             ? (bg_opacity.current.style.height = "900px")
             : (bg_opacity.current.style.height = "1200px"),
@@ -111,10 +113,13 @@ export default function Portfolios() {
             title.current.innerText = "Projects";
           }, 300))
         : ((projectListRef.current.style.left = "-110%"),
-          
           (projectReadMe.current.style.left = "0%"),
-          ( innerWidth > 599 ? wrap.current.style.height = "2850px" : wrap.current.style.height = "3000px"),
-          (innerWidth > 599 ? bgRef.current.style.height = "" : bgRef.current.style.height = "3000px"),
+          innerWidth > 599
+            ? (wrap.current.style.height = "100%")
+            : (wrap.current.style.height = "100%"),
+          innerWidth > 599
+            ? (bgRef.current.style.height = "2850px")
+            : (bgRef.current.style.height = "3000px"),
           innerWidth > 599
             ? (bg_opacity.current.style.height = "2850px")
             : (bg_opacity.current.style.height = "3000px"),
@@ -137,9 +142,9 @@ export default function Portfolios() {
     innerHeight,
   ]);
 
-  useEffect(()=>{
-    console.log(innerWidth)
-  },[innerWidth])
+  useEffect(() => {
+    console.log(innerWidth);
+  }, [innerWidth]);
   return (
     <section
       style={{
@@ -175,6 +180,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(lamah);
                   setProjectStateString("Lamah");
+
                   locationPortfolio();
                 }}
               >
@@ -193,6 +199,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(rb);
                   setProjectStateString("ROMBOOK");
+
                   locationPortfolio();
                 }}
               >
@@ -210,6 +217,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(sa);
                   setProjectStateString("Smokre Area");
+
                   locationPortfolio();
                 }}
               >
@@ -227,6 +235,7 @@ export default function Portfolios() {
                   setProjectList(false);
                   setProjectState(mypad);
                   setProjectStateString("My Pad");
+
                   locationPortfolio();
                 }}
               >
@@ -269,11 +278,12 @@ export default function Portfolios() {
                               //   : innerWidth < 599
                               //   ? "100px 200px"
                               //   : "cover",
-                              
+
                               projectState === lamah && innerWidth > 599
-                              ? "250px 540px" 
-                              : projectState === lamah && innerWidth <= 599 ? "100px 200px"
-                              : "cover",
+                                ? "250px 540px"
+                                : projectState === lamah && innerWidth <= 599
+                                ? "100px 200px"
+                                : "cover",
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "50% 0",
                           }}

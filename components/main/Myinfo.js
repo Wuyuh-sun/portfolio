@@ -52,7 +52,13 @@ export default function Myinfo() {
         <div>
           <div className={style.title_wrap}>
             <div className={style.title_wrapBox} onClick={locationMyInfo}>
-              <Image src={LinkImg} width={50} height={50} alt="LinkImg" loading="lazy"/>
+              <Image
+                src={LinkImg}
+                width={50}
+                height={50}
+                alt="LinkImg"
+                loading="lazy"
+              />
               <h1>My Info</h1>
             </div>
           </div>
@@ -143,9 +149,7 @@ export default function Myinfo() {
             />
           </div>
           <hr />
-          <div
-            className={style.myUnivCareer_title}
-          >
+          <div className={style.myUnivCareer_title}>
             저의 성장 과정 입니다!!
           </div>
           <div className={style.myUnivCareer}>
@@ -276,7 +280,9 @@ export default function Myinfo() {
                 </div>
               </div>
 
-              <div className={style.contentText}>{expSelectState.content}</div>
+              <div className={style.contentText}>
+                {expSelectState.content.replace('"', "")}
+              </div>
             </div>
           </div>
         </div>
