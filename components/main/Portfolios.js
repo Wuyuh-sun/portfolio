@@ -198,7 +198,7 @@ export default function Portfolios() {
                   setBgState(rbUrl);
                   setProjectList(false);
                   setProjectState(rb);
-                  setProjectStateString("ROMBOOK");
+                  setProjectStateString("ROOMBOOK");
 
                   locationPortfolio();
                 }}
@@ -216,7 +216,7 @@ export default function Portfolios() {
                   setBgState(saUrl);
                   setProjectList(false);
                   setProjectState(sa);
-                  setProjectStateString("Smokre Area");
+                  setProjectStateString("Smoke Area");
 
                   locationPortfolio();
                 }}
