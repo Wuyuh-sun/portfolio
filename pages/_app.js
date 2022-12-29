@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://wuyuh.tk/" />
         <meta property="og:image" content="/ogImg.png" />
         <meta property="og:article:author" content="우윤하" />
-        
+        <link rel="manifest" href="/manifest.json"></link>
       </Head>
       <Provider store={store}>
         <Component {...pageProps} />
