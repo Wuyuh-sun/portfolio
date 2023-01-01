@@ -164,7 +164,7 @@ export default function Portfolios() {
   ]);
 
   useEffect(() => {
-    console.log(innerWidth);
+    // console.log(innerWidth);
   }, [innerWidth]);
   return (
     <section
