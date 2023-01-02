@@ -20,7 +20,10 @@ import lamah from "./lamah.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Zoom } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/zoom";
+import "swiper/css/lazy";
+import { Pagination, Zoom, Navigation, Lazy } from "swiper";
 import lamah_readme from "./lamah_readme.json";
 import rb_readme from "./rb_readme.json";
 import sa_readme from "./sa_readme.json";
@@ -151,7 +154,6 @@ export default function Portfolios() {
           setTimeout(() => {
             backBtn.current.style.display = "block";
             // projectReadMe.current.style.transition = "none";
-            
           }, 500));
     }
     projectListFunc();
@@ -283,15 +285,19 @@ export default function Portfolios() {
             <article ref={projectReadMe} className={style.projectReadMe}>
               <div className={style.swiperWrap}>
                 <Swiper
+                  navigation={true}
                   pagination={true}
                   loop={true}
                   zoom={true}
-                  modules={[Pagination, Zoom]}
+                  lazy={true}
+                  modules={[Lazy, Pagination, Zoom, Navigation]}
                   className="mySwiper"
                   style={{
                     height: "100%",
                     borderRadius: "30px",
                     boxShadow: "0 3px 6px rgba(0,0,0,0.5)",
+                    "--swiper-navigation-color": "#1c1c24",
+                    "--swiper-pagination-color": "#FFB300",
                   }}
                 >
                   {projectState &&

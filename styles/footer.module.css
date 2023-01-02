@@ -21,7 +21,7 @@
 
 .absoluteWrap h1 {
   display: inline-block;
-  font-size: 6vw;
+  font-size: clamp(1rem, 5vw, 5rem);
   font-weight: 900;
   color: white;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
@@ -49,14 +49,14 @@
 .wrap>a {
   text-decoration: none;
   color: var(--blue2);
-  font-size: 6vw;
+  font-size: clamp(1rem, 5vw, 5rem);
   font-weight: 900;
   transition: 0.3s ease-in-out;
   opacity: 0.9;
 }
 
 .wrap>a:hover {
-  font-size: 6.3vw;
+  font-size: clamp(1rem, 6vw, 5rem);
   color: #ffb300;
 }
 

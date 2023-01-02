@@ -20,7 +20,9 @@ import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Zoom } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css/lazy";
+import { Lazy, Pagination, Zoom, Navigation } from "swiper";
 
 export default function Myinfo() {
   const wrap = useRef();
@@ -191,15 +193,19 @@ export default function Myinfo() {
               <div className={style.intro_swiperWrap}>
                 <div className={style.intro_swiper1}>
                   <Swiper
+                    navigation={true}
                     pagination={true}
                     // loop={true}
                     zoom={true}
-                    modules={[Pagination, Zoom]}
+                    lazy={true}
+                    modules={[Lazy, Pagination, Zoom, Navigation]}
                     className="mySwiper"
                     style={{
                       height: "100%",
                       borderRadius: "20px",
                       boxShadow: "0 3px 6px rgba(0,0,0,0.5)",
+                      "--swiper-navigation-color": "#000",
+                    "--swiper-pagination-color": "#FFB300",
                     }}
                   >
                     {expSelectState.web.length === 0 ? (
@@ -245,15 +251,19 @@ export default function Myinfo() {
                   }
                 >
                   <Swiper
+                    navigation={true}
                     pagination={true}
                     // loop={true}
                     zoom={true}
-                    modules={[Pagination, Zoom]}
+                    lazy={true}
+                    modules={[Lazy, Pagination, Zoom, Navigation]}
                     className="mySwiper"
                     style={{
                       height: "100%",
                       borderRadius: "20px",
                       boxShadow: "0 3px 6px rgba(0,0,0,0.5)",
+                      "--swiper-navigation-color": "#1c1c24",
+                    "--swiper-pagination-color": "#FFB300",
                     }}
                   >
                     {expSelectState.mobile.length === 0 ? (
