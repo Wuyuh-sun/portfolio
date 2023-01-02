@@ -28,6 +28,18 @@ export default function Footer() {
     dispatch(locateMore(locationFooter));
   }, [dispatch]);
 
+  const observer = new IntersectionObserver((e) => {
+    e.forEach((item) => {
+      if (item.isIntersecting) {
+        dispatch(nowLocate("more"));
+      }
+    });
+  });
+
+  useEffect(() => {
+    observer.observe(wrap.current);
+  }, []);
+
   return (
     <>
       <div ref={wrap} className={style.footerWrap}>

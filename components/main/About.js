@@ -17,7 +17,7 @@ import {
 export default function About() {
   const wrap = useRef();
   const dispatch = useDispatch();
-
+  
   function locationAboutMe() {
     dispatch(nowLocate("aboutme"));
     wrap.current.scrollIntoView({
@@ -32,13 +32,31 @@ export default function About() {
     dispatch(locateAboutMe(locationAboutMe));
   }, [dispatch]);
 
+  window.addEventListener("scroll",(e)=>{
+    console.log(e.currentTarget)
+  })
+
+  const section = useRef();
+
+  const observer = new IntersectionObserver((e) => {
+    e.forEach((item) => {
+      if (item.isIntersecting) {
+        dispatch(nowLocate("aboutme"));
+      }
+    });
+  });
+
+  useEffect(() => {
+    observer.observe(section.current);
+  }, []);
+
   return (
     <>
       <div className={style.section}>
         <div className={style.wrap} ref={wrap}>
-          <section>
+          <section ref={section}>
             <div className={style.title_wrap}>
-              <div className={style.title_wrapBox} >
+              <div className={style.title_wrapBox}>
                 {/* <Image src={LinkImg} width={50} height={50} alt="linkImg" /> */}
                 <h1 onClick={locationAboutMe}>반갑습니다 저는!</h1>
                 {/* <Image
@@ -51,7 +69,8 @@ export default function About() {
             </div>
             <div className={style.content_wrap}>
               <div>
-                천천히 그리고 꾸준히 공부하는걸 좋아하는 <strong>우윤하</strong>입니다.
+                천천히 그리고 꾸준히 공부하는걸 좋아하는 <strong>우윤하</strong>
+                입니다.
                 <br />
                 경험을 중요시하고 그 경험을 바탕으로 미래를 그립니다.
               </div>

@@ -46,6 +46,18 @@ export default function Myinfo() {
     // console.dir(expSelectState);
   }, [expSelectState]);
 
+  const observer = new IntersectionObserver((e) => {
+    e.forEach((item) => {
+      if (item.isIntersecting) {
+        dispatch(nowLocate("myinfo"));
+      } 
+    });
+  });
+
+  useEffect(() => {
+    observer.observe(wrap.current);
+  }, []);
+
   return (
     <>
       <section className={style.wrap} ref={wrap}>

@@ -32,6 +32,18 @@ export default function Skill() {
   useEffect(() => {
     dispatch(locateSkills(locationSkill));
   }, [dispatch]);
+
+  const observer = new IntersectionObserver((e) => {
+    e.forEach((item) => {
+      if (item.isIntersecting) {
+        dispatch(nowLocate("skills"));
+      }
+    });
+  });
+
+  useEffect(() => {
+    observer.observe(wrap.current);
+  }, []);
   return (
     <>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

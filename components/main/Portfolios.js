@@ -166,6 +166,18 @@ export default function Portfolios() {
   useEffect(() => {
     // console.log(innerWidth);
   }, [innerWidth]);
+
+  const observer = new IntersectionObserver((e) => {
+    e.forEach((item) => {
+      if (item.isIntersecting) {
+        dispatch(nowLocate("portfolio"));
+      }
+    });
+  });
+
+  useEffect(() => {
+    observer.observe(bgRef.current);
+  }, []);
   return (
     <section
       style={{
