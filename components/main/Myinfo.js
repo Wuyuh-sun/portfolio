@@ -131,7 +131,7 @@ export default function Myinfo() {
                 />
               }
               title="생년월일"
-              content="1995.05.10"
+              content="1998.05.10"
             />
             <InfoItem
               icon={
