@@ -11,7 +11,6 @@ import {
 import { useDispatch } from "react-redux";
 import { useEffect, useRef } from "react";
 
-
 export default function Footer() {
   const wrap = useRef();
   const dispatch = useDispatch();
@@ -56,15 +55,18 @@ export default function Footer() {
           </svg>
         </div>
         <div className={style.wrap}>
-          <a
-            href="https://mail.google.com/mail/u/0/?fs=1&to=wjh0970@gmail.com&tf=cm"
-            target="_blank"
-            rel="noreferrer"
-          >
-            wjh0970@gmail.com
-          </a>
-          <br />
-          <small>아무 내용도 좋아요!! 확인하는 데로 답을 드리겠습니다!</small>
+          <div className={style.wrapContent}>
+            <a
+              href="https://mail.google.com/mail/u/0/?fs=1&to=wjh0970@gmail.com&tf=cm"
+              target="_blank"
+              rel="noreferrer"
+            >
+              wjh0970@gmail.com
+            </a>
+            <br />
+            <small>아무 내용도 좋아요!! 확인하는 데로 답을 드리겠습니다!</small>
+          </div>
+
           <div className={style.footer}>
             <div>
               <a
